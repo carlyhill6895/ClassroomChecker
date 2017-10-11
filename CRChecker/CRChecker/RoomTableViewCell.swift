@@ -10,6 +10,17 @@ import UIKit
 
 class RoomTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var roomLabel: UILabel!
+    @IBOutlet weak var capacityLabel: UILabel!
+    
+    var room : Room? = nil{
+        didSet{
+            roomLabel.text = room!.roomName
+            let capacity = room!.capacity
+            capacityLabel.text = "Capacity : \(capacity)"
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

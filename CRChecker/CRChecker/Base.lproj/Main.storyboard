@@ -101,10 +101,10 @@
             </objects>
             <point key="canvasLocation" x="1399" y="-256"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Results Table View Controller-->
         <scene sceneID="C9p-u5-zIR">
             <objects>
-                <tableViewController id="Pkm-Xl-uUO" sceneMemberID="viewController">
+                <tableViewController id="Pkm-Xl-uUO" customClass="ResultsTableViewController" customModule="CRChecker" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="oqP-yv-vix">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

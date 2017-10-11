@@ -12,10 +12,19 @@ class ResultsTableViewController: UITableViewController {
 
     var options: [String:Any?] = [:]
     
+    var rooms = DataManager.getData(options: "test")
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let nib = UINib(nibName: "RoomTableViewCell", bundle: nil)
+        
+        tableView.register(nib, forCellReuseIdentifier: "roomCell")
+
 
         print("Options: ", options)
+        
+        tableView.rowHeight = 56
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -33,23 +42,26 @@ class ResultsTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return rooms.count
     }
 
-    /*
+
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "roomCell", for: indexPath) as! RoomTableViewCell
+        
+        let room = rooms[indexPath.row]
+        
+        cell.room = room
 
         // Configure the cell...
 
         return cell
     }
-    */
 
     /*
     // Override to support conditional editing of the table view.
