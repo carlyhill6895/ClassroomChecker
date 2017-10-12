@@ -18,54 +18,50 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="56.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="njP-uY-i8c">
-                        <rect key="frame" x="8" y="8" width="77.5" height="37.5"/>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="njP-uY-i8c">
+                        <rect key="frame" x="8" y="4" width="77.5" height="48.5"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A1.12" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="36J-Qc-GIp">
-                                <rect key="frame" x="0.0" y="0.0" width="39.5" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="0.0" y="0.0" width="48.5" height="24.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Capacity : 8" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rw8-0w-IT4">
-                                <rect key="frame" x="0.0" y="20.5" width="77.5" height="17"/>
+                                <rect key="frame" x="0.0" y="24.5" width="77.5" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                     </stackView>
-                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="d6r-iU-xkA">
-                        <rect key="frame" x="220" y="14" width="80" height="50"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uVM-Ao-rbF">
-                                <rect key="frame" x="0.0" y="0.0" width="20" height="50"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gsL-zC-IuV">
-                                <rect key="frame" x="30" y="0.0" width="20" height="50"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="abO-Ta-C1m">
-                                <rect key="frame" x="60" y="0.0" width="20" height="50"/>
-                            </imageView>
-                        </subviews>
+                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icons8-Lock" translatesAutoresizingMaskIntoConstraints="NO" id="eap-G7-DXD">
+                        <rect key="frame" x="281" y="14" width="28" height="28"/>
+                        <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="80" id="1ee-lS-RW1"/>
+                            <constraint firstAttribute="height" constant="28" id="7hz-62-ULb"/>
+                            <constraint firstAttribute="width" constant="28" id="QVK-yi-SYc"/>
                         </constraints>
-                    </stackView>
+                    </imageView>
                 </subviews>
                 <constraints>
                     <constraint firstItem="njP-uY-i8c" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="Be1-hj-mPy"/>
-                    <constraint firstAttribute="trailing" secondItem="d6r-iU-xkA" secondAttribute="trailing" constant="20" symbolic="YES" id="ERd-Dh-zGK"/>
-                    <constraint firstItem="njP-uY-i8c" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="JdG-WZ-HwV"/>
-                    <constraint firstItem="d6r-iU-xkA" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="14" id="ncv-my-g4N"/>
+                    <constraint firstItem="njP-uY-i8c" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="JdG-WZ-HwV"/>
+                    <constraint firstAttribute="bottom" secondItem="njP-uY-i8c" secondAttribute="bottom" constant="4" id="KTF-QO-nk0"/>
+                    <constraint firstItem="eap-G7-DXD" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="N7l-xL-fts"/>
+                    <constraint firstAttribute="trailing" secondItem="eap-G7-DXD" secondAttribute="trailing" constant="11" id="TV9-G1-vSf"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="capacityLabel" destination="Rw8-0w-IT4" id="9ex-25-MHU"/>
+                <outlet property="lockedImageView" destination="eap-G7-DXD" id="Hpo-eW-Qjj"/>
                 <outlet property="roomLabel" destination="36J-Qc-GIp" id="Zj6-2g-xhh"/>
             </connections>
             <point key="canvasLocation" x="34" y="130.5"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="icons8-Lock" width="100" height="100"/>
+    </resources>
 </document>

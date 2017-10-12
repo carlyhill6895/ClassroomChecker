@@ -13,11 +13,16 @@ class RoomTableViewCell: UITableViewCell {
     @IBOutlet weak var roomLabel: UILabel!
     @IBOutlet weak var capacityLabel: UILabel!
     
+    @IBOutlet weak var lockedImageView: UIImageView!
+    
     var room : Room? = nil{
         didSet{
             roomLabel.text = room!.roomName
             let capacity = room!.capacity
             capacityLabel.text = "Capacity : \(capacity)"
+            if DataManager.prototypeVersion() == 2{
+                lockedImageView.isHidden = !room!.locked
+            }
         }
     }
     

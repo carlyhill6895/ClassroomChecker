@@ -17,6 +17,23 @@ class ResultsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // filter based on building
+        if let building = options["building"] as? String{
+            rooms = rooms.filter { room in
+                return room.roomName.hasPrefix(building)
+            }
+        }
+        
+        // filter based on capacity
+        if let capacity = options["persons"] as? Double{
+            print("we have a capacity set", capacity)
+            rooms = rooms.filter { room in
+                return Double(room.capacity) > capacity
+            }
+        }
+        
+        
+        
         let nib = UINib(nibName: "RoomTableViewCell", bundle: nil)
         
         tableView.register(nib, forCellReuseIdentifier: "roomCell")
@@ -53,59 +70,36 @@ class ResultsTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "roomCell", for: indexPath) as! RoomTableViewCell
-        
-        let room = rooms[indexPath.row]
-        
-        cell.room = room
 
-        // Configure the cell...
+        cell.room = rooms[indexPath.row]
 
         return cell
     }
 
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if rooms[indexPath.row].locked && DataManager.prototypeVersion() == 2{
+            showLockedAlert()
+        }
     }
-    */
 
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+    func showLockedAlert(){
+        let alertController = UIAlertController(title: "Room locked", message: "Would you like to unlock this room?", preferredStyle: .alert)
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { action in
+            // ...
+        }
+        alertController.addAction(cancelAction)
+        
+        let OKAction = UIAlertAction(title: "OK", style: .default) { action in
+            // ...
+        }
+        alertController.addAction(OKAction)
+        
+        self.present(alertController, animated: true) {
+            
+        }
     }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    
+    
 }

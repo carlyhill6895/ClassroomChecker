@@ -14,9 +14,6 @@ class Prototype1ViewController: FormViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print(DataManager.getData(options: "test"))
-
-        
         form +++ Section("Options")
             
             <<< PushRow<String>("building") {

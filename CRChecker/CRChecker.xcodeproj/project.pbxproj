@@ -11,6 +11,7 @@
 		8798731C51D2750D449E9E42 /* Pods_CRCheckerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D92ACE2BEAC4D603720FE59B /* Pods_CRCheckerUITests.framework */; };
 		C52BD55EB028635E9E7BF119 /* Pods_CRChecker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B69885E5B153B68F07F454C4 /* Pods_CRChecker.framework */; };
 		D4226B061F866B74006AC1C1 /* Prototype1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4226B051F866B74006AC1C1 /* Prototype1ViewController.swift */; };
+		D4846D5D1F8E56450027ABC1 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4846D5C1F8E56450027ABC1 /* MainViewController.swift */; };
 		D4ABBBA91F8673B300F7C1FB /* Protype2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4ABBBA81F8673B300F7C1FB /* Protype2ViewController.swift */; };
 		D4ABBBAB1F8673C200F7C1FB /* ResultsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4ABBBAA1F8673C200F7C1FB /* ResultsTableViewController.swift */; };
 		D4ABBBAD1F8673ED00F7C1FB /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4ABBBAC1F8673ED00F7C1FB /* DataManager.swift */; };
@@ -49,6 +50,7 @@
 		B69885E5B153B68F07F454C4 /* Pods_CRChecker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CRChecker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9501ADEFBFE574E8AFE97FD /* Pods_CRCheckerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CRCheckerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4226B051F866B74006AC1C1 /* Prototype1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prototype1ViewController.swift; sourceTree = "<group>"; };
+		D4846D5C1F8E56450027ABC1 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		D4ABBBA81F8673B300F7C1FB /* Protype2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protype2ViewController.swift; sourceTree = "<group>"; };
 		D4ABBBAA1F8673C200F7C1FB /* ResultsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsTableViewController.swift; sourceTree = "<group>"; };
 		D4ABBBAC1F8673ED00F7C1FB /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 			children = (
 				D4C51E1C1F86626E009737E6 /* AppDelegate.swift */,
 				D4226B051F866B74006AC1C1 /* Prototype1ViewController.swift */,
+				D4846D5C1F8E56450027ABC1 /* MainViewController.swift */,
 				D4ABBBA81F8673B300F7C1FB /* Protype2ViewController.swift */,
 				D4ABBBAA1F8673C200F7C1FB /* ResultsTableViewController.swift */,
 				D4ABBBAC1F8673ED00F7C1FB /* DataManager.swift */,
@@ -480,6 +483,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4846D5D1F8E56450027ABC1 /* MainViewController.swift in Sources */,
 				D4ABBBB11F8683F800F7C1FB /* RoomTableViewCell.swift in Sources */,
 				D4ABBBAB1F8673C200F7C1FB /* ResultsTableViewController.swift in Sources */,
 				D4ABBBAD1F8673ED00F7C1FB /* DataManager.swift in Sources */,

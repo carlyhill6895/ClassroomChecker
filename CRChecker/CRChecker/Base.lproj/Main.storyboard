@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CRChecker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="CRChecker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -25,6 +25,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                         <state key="normal" title="Prototype 1"/>
                                         <connections>
+                                            <action selector="prototypeOnePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="baC-Yo-A94"/>
                                             <segue destination="rh8-Hj-63H" kind="show" id="Crh-CR-Mcj"/>
                                         </connections>
                                     </button>
@@ -33,7 +34,8 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                         <state key="normal" title="Prototype 2"/>
                                         <connections>
-                                            <segue destination="1M2-mv-U8D" kind="show" id="rpS-xz-nEs"/>
+                                            <action selector="prototypeTwoPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wyY-zK-oZ9"/>
+                                            <segue destination="rh8-Hj-63H" kind="show" id="ORH-QP-Wng"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -52,36 +54,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="476" y="132.68365817091455"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="hz0-tg-ZsQ">
-            <objects>
-                <viewController id="1M2-mv-U8D" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Z6Y-aB-6W3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="UQM-BF-BrO">
-                                <rect key="frame" x="16" y="64" width="343" height="223"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </mapView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zud-Jl-mLn">
-                                <rect key="frame" x="164" y="536" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <segue destination="Pkm-Xl-uUO" kind="show" id="WT2-Um-kgw"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <viewLayoutGuide key="safeArea" id="w4H-D3-hz1"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6jD-gL-ZYb" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1399.2" y="438.53073463268368"/>
+            <point key="canvasLocation" x="540" y="133"/>
         </scene>
         <!--Prototype1 View Controller-->
         <scene sceneID="PGL-sc-aDV">
@@ -99,7 +72,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kso-H9-wbm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1399" y="-256"/>
+            <point key="canvasLocation" x="1404" y="133"/>
         </scene>
         <!--Results Table View Controller-->
         <scene sceneID="C9p-u5-zIR">
@@ -127,7 +100,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uxz-zR-jj4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2363" y="0.0"/>
+            <point key="canvasLocation" x="2258" y="133"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="shT-6q-yyD">
@@ -149,6 +122,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="CxX-fz-jqx"/>
+        <segue reference="Crh-CR-Mcj"/>
     </inferredMetricsTieBreakers>
 </document>
